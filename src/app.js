@@ -47,6 +47,13 @@ app.use(express.json());
 
 app.use(express.urlencoded({extended: true,}));
 
+// Root Route
+app.get("/", (req, res) => {
+  res.status(200).json({
+    success: true,
+    message: "Welcome to Enclave Portal Backend API",
+  });
+});
 /*
 |--------------------------------------------------------------------------
 | Health Check
